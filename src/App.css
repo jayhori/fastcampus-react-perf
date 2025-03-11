@@ -1,13 +1,11 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 80rem;
   padding: 2rem 2rem 8rem 2rem;
   text-align: left;
 }
 
 .image-list {
   width: 100%;
-  max-width: 50rem;
   margin: 0;
   padding: 0;
   list-style-type: none;
