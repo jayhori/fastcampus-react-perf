@@ -21,11 +21,11 @@ function Home() {
       <ul>
         <li>
           <Link to="/challenge-1">
-            <strong>Challenge 1:</strong> Image Format
+            Challenge 1: Utilizing the right image format
           </Link>
         </li>
         <li>
-          <Link to="/challenge-2">Challenge 2</Link>
+          <Link to="/challenge-2">Challenge 2: Preloading crutial images</Link>
         </li>
         <li>
           <Link to="/challenge-3">Challenge 3</Link>
@@ -40,7 +40,7 @@ function Home() {
 
       <h2>Final Project:</h2>
       <p>
-        <Link to="/final-project">Build a Fully Optimized Web Page</Link>
+        <Link to="/final-project">Build a fully optimized web page</Link>
       </p>
 
       <h2>Solutions</h2>
