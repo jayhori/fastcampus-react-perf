@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Home from './Home'
-import ChallengeOne from './ChallengeOne'
+import ChallengeOne from './challenges/ChallengeOne'
 
 function App() {
   return (
