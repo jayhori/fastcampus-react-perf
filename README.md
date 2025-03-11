@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Web Performance with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is designed to help you learn how to optimize React applications for web performance through practical challenges. Each challenge page is intentionally slow and/or inefficient, and your task is to identify and fix performance issues.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page**: The home page introduces the course and lists the challenges and final project.
+- **Challenges**: Each challenge focuses on a specific aspect of web performance optimization.
+- **Final Project**: Build a fully optimized web page.
 
-## Expanding the ESLint configuration
+## Available Scripts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+In the project directory, you can run:
 
-- Configure the top-level `parserOptions` property like this:
+- `npm run dev`: Starts the development server using Vite.
+- `npx prettier --check <file-name>`: Checks the code formatting using Prettier.
+- `npx prettier --write <file-name>`: Formats the code using Prettier.
+- `npm run build`: Builds the app for production using TypeScript and Vite.
+- `npm run preview`: Previews the production build.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Dependencies
+
+- **React**: ^19.0.0
+- **React DOM**: ^19.0.0
+- **React Router DOM**: ^7.2.0
+
+## DevDependencies
+
+- **TypeScript**: ~5.7.2
+- **Vite**: ^6.2.0
+- **ESLint**: ^9.21.0 and related plugins
+- **Prettier**: ^3.5.2
+
+## Solutions
+
+Solutions for each challenge are available in the solution git branches. For example, the solution for Challenge 1 is available in the `solution/challenge-1` branch.
+
+## Getting Started
+
+To get started, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/jayhori/fastcampus-react-perf.git
+cd fastcampus-react-perf
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Then, you can start the development server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
 ```
