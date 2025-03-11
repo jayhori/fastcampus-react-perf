@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 /**
  * Your mission:
- * 1. Record the current LCP (Largest Contentful Paint) measurement
+ * 1. Record the current LCP measurement
  * 2. Confirm the problem: The images are not optimized for the web
  * 3. Replace the images with WebP images
  * 4. Confirm LCP improvement
@@ -32,9 +32,9 @@ function ChallengeOne() {
         <strong>Your Mission:</strong>
       </p>
       <ol>
-        <li>Record the current LCP (Largest Contentful Paint) measurement</li>
-        <li>Confirm the problem: <strong>The images are not optimized for the web</strong></li>
-        <li>Replace the images with <strong>WebP</strong> images</li>
+        <li>Record the current LCP measurement</li>
+        <li>Confirm the problem: The images are not optimized for the web</li>
+        <li>Replace the images with WebP images</li>
         <li>Confirm LCP improvement</li>
       </ol>
 
