@@ -27,7 +27,7 @@ function ChallengeOne() {
       <nav>
         <Link to="/">Back to Home</Link>
       </nav>
-      <h2>Challenge 1: Image Format</h2>
+      <h2>Challenge 1: Image format</h2>
       <p>
         <strong>Your Mission:</strong>
       </p>
