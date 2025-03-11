@@ -20,6 +20,15 @@ import { Link } from 'react-router-dom'
  */
 
 function ChallengeOne() {
+  // In a real scenario, this value would come from a feature flag server
+  const featureFlag = true
+
+  enum ImageFormat {
+    JPG = '.jpg',
+    WEBP = '.webp',
+  }
+  const currentFormat = featureFlag ? ImageFormat.WEBP : ImageFormat.JPG
+
   const imageIds = Array.from({ length: 10 }, (_, i) => i + 1)
 
   return (
@@ -42,7 +51,7 @@ function ChallengeOne() {
         {imageIds.map((id) => (
           <li key={id}>
             <img
-              src={`https://picsum.photos/5000/3333.jpg?random=${id}`}
+              src={`https://picsum.photos/5000/3333${currentFormat}?random=${id}`}
               className="full-width-image"
               alt={`Random image ${id}`}
             />
