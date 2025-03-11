@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom'
 
 /**
  * Your mission:
- * 1. Inspect the image format
- * 2. Replace the images with WebP format
+ * 1. Record the current LCP (Largest Contentful Paint) measurement
+ * 2. Confirm the problem: The images are not optimized for the web
+ * 3. Replace the images with WebP images
+ * 4. Confirm LCP improvement
  *
  * Solution available in the `solution/challenge-1` branch
  *
  * ミッション:
- * 1. 画像フォーマットをインスペクトする
- * 2. 画像をWebPフォーマットに置き換える
+ * 1. 現在のLCP数値を記録する
+ * 2. 問題を確認する: 画像がWebに最適化されていない
+ * 3. 画像をWebPフォーマットに置き換える
+ * 4. LCPの改善を確認する
  *
  * 解答は `solution/challenge-1` ブランチを参照
  */
@@ -28,8 +32,10 @@ function ChallengeOne() {
         <strong>Your Mission:</strong>
       </p>
       <ol>
-        <li>Inspect the image format</li>
-        <li>Replace the images with WebP images</li>
+        <li>Record the current LCP (Largest Contentful Paint) measurement</li>
+        <li>Confirm the problem: <strong>The images are not optimized for the web</strong></li>
+        <li>Replace the images with <strong>WebP</strong> images</li>
+        <li>Confirm LCP improvement</li>
       </ol>
 
       <ul className="image-list">
