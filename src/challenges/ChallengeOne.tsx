@@ -32,8 +32,8 @@ function ChallengeOne() {
         <strong>Your Mission:</strong>
       </p>
       <ol>
-        <li>Record the current LCP measurement</li>
-        <li>Confirm the problem: The images are not optimized for the web</li>
+        <li>Record the current LCP</li>
+        <li>Confirm that the images are not optimized for the web</li>
         <li>Replace the images with WebP images</li>
         <li>Confirm LCP improvement</li>
       </ol>
