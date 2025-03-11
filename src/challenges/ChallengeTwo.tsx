@@ -34,11 +34,10 @@ function ChallengeTwo() {
       </p>
       <ol>
         <li>
-          Confirm that the image started loading after JavaScript finished loading
+          Confirm that the image started loading after JavaScript finished
+          loading loading
         </li>
-        <li>
-          Code the image preloading
-        </li>
+        <li>Code the image preloading</li>
         <li>Confirm the image started loading immediately</li>
       </ol>
     </>

@@ -9,9 +9,7 @@ function Home() {
       <h2>Challenges</h2>
       <ul>
         <li>
-          <Link to="/challenge-1">
-            1: Utilizing the right image format
-          </Link>
+          <Link to="/challenge-1">1: Utilizing the right image format</Link>
         </li>
         <li>
           <Link to="/challenge-2">2: Preloading crutial images</Link>
