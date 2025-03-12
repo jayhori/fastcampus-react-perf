@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom'
  */
 
 function ChallengeOne() {
-  const imageIds = Array.from({ length: 30 }, (_, i) => i + 1)
+  const imageIds = Array.from({ length: 10 }, (_, i) => i + 1)
 
   return (
     <>
@@ -42,7 +42,7 @@ function ChallengeOne() {
         {imageIds.map((id) => (
           <li key={id}>
             <img
-              src={`https://picsum.photos/500/300.jpg?random=${id}`}
+              src={`https://picsum.photos/5000/3333.jpg?random=${id}`}
               className="full-width-image"
               alt={`Random image ${id}`}
             />
