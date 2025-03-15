@@ -25,7 +25,7 @@ function ChallengeTwo() {
       </nav>
       <h2>Challenge 2: Preloading</h2>
       <img
-        src={`https://picsum.photos/id/1060/300/200.webp`}
+        src={`https://picsum.photos/id/1060/1200/800.webp`}
         className="full-width-image"
         alt={`Random image`}
       />
