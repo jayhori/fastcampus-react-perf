@@ -5,6 +5,13 @@
   text-align: left;
 }
 
+.card {
+  border: 1px solid #e1e9f6;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
 .image-list {
   width: 100%;
   margin: 0;
@@ -17,4 +24,10 @@
   height: auto;
   margin-bottom: 1rem;
   display: block;
+}
+
+.landscape-ratio-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
