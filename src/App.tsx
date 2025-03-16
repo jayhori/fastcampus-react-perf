@@ -2,6 +2,7 @@ import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Home from './Home'
 import ChallengeOne from './challenges/ChallengeOne'
 import ChallengeTwo from './challenges/ChallengeTwo'
+import ChallengeThree from './challenges/ChallengeThree'
 import ExampleFetchPriority from './examples/ExampleFetchPriority'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/challenge-1" element={<ChallengeOne />} />
           <Route path="/challenge-2" element={<ChallengeTwo />} />
+          <Route path="/challenge-3" element={<ChallengeThree />} />
           <Route path="/example-fetch-priority" element={<ExampleFetchPriority />} />
         </Routes>
       </Router>

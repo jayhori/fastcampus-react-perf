@@ -15,7 +15,7 @@ function Home() {
           <Link to="/challenge-2">2: Preloading crutial images</Link>
         </li>
         <li>
-          <Link to="/challenge-3">3</Link>
+          <Link to="/challenge-3">3: Lazy loading</Link>
         </li>
         <li>
           <Link to="/challenge-4">4</Link>
