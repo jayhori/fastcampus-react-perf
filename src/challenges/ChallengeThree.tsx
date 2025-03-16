@@ -40,8 +40,10 @@ function ChallengeThree() {
           <li key={id}>
             <img
               src={`https://picsum.photos/600/400.webp?random=${id}`}
-              className="full-width-image"
+              className="full-width-image landscape-ratio-image"
               alt={`Random image ${id}`}
+              loading={id < 4 ? 'eager' : 'lazy'}
+              fetchPriority={id < 4 ? 'high' : 'auto'}
             />
           </li>
         ))}
