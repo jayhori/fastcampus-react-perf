@@ -41,6 +41,13 @@ function Home() {
         <em>solution/challenge-1</em> branch.
       </p>
 
+      <h2>Examples</h2>
+      <ul>
+        <li>
+          <Link to="/example-fetch-priority">Fetch priority</Link>
+        </li>
+      </ul>
+
       <h2>About</h2>
       <p>
         This course helps you learn how to optimize React applications for web
