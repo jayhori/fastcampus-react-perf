@@ -4,6 +4,7 @@ import ChallengeOne from './challenges/ChallengeOne'
 import ChallengeTwo from './challenges/ChallengeTwo'
 import ChallengeThree from './challenges/ChallengeThree'
 import ExampleFetchPriority from './examples/ExampleFetchPriority'
+import ExampleLazyLoadingVersusLCP from './examples/ExampleLazyLoadingVersusLCP'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/challenge-2" element={<ChallengeTwo />} />
           <Route path="/challenge-3" element={<ChallengeThree />} />
           <Route path="/example-fetch-priority" element={<ExampleFetchPriority />} />
+          <Route path="/example-lazy-loading-vs-lcp" element={<ExampleLazyLoadingVersusLCP />} />
         </Routes>
       </Router>
     </>
