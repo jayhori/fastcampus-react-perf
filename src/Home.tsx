@@ -46,6 +46,9 @@ function Home() {
         <li>
           <Link to="/example-fetch-priority">Fetch priority</Link>
         </li>
+        <li>
+          <Link to="/example-lazy-loading-vs-lcp">Lazy loading vs LCP</Link>
+        </li>
       </ul>
 
       <h2>About</h2>
