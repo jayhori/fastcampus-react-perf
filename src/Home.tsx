@@ -49,6 +49,9 @@ function Home() {
         <li>
           <Link to="/example-lazy-loading-vs-lcp">Lazy loading vs LCP</Link>
         </li>
+        <li>
+          <Link to="/example-scoreboard">Time to Scoreboard</Link>
+        </li>
       </ul>
 
       <h2>About</h2>
