@@ -30,4 +30,16 @@
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.landscape-ratio-image-with-background {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  display: block;
+  margin-bottom: 1rem;
+  background-image: url('/placeholder.webp');
+  background-size: cover;
+  background-position: center;
 }
