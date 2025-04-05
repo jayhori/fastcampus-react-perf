@@ -18,7 +18,7 @@ function Home() {
           <Link to="/challenge-3">3: Lazy loading</Link>
         </li>
         <li>
-          <Link to="/challenge-4">4</Link>
+          <Link to="/challenge-4">4: Minimizing layout shifts</Link>
         </li>
         <li>
           <Link to="/challenge-5">5</Link>
