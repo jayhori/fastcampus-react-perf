@@ -18,8 +18,14 @@ function App() {
           <Route path="/challenge-2" element={<ChallengeTwo />} />
           <Route path="/challenge-3" element={<ChallengeThree />} />
           <Route path="/challenge-4" element={<ChallengeFour />} />
-          <Route path="/example-fetch-priority" element={<ExampleFetchPriority />} />
-          <Route path="/example-lazy-loading-vs-lcp" element={<ExampleLazyLoadingVersusLCP />} />
+          <Route
+            path="/example-fetch-priority"
+            element={<ExampleFetchPriority />}
+          />
+          <Route
+            path="/example-lazy-loading-vs-lcp"
+            element={<ExampleLazyLoadingVersusLCP />}
+          />
           <Route path="/example-scoreboard" element={<Scoreboard />} />
         </Routes>
       </Router>
