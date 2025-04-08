@@ -1,12 +1,13 @@
 import '../App.css'
 import { Link } from 'react-router-dom'
+import SmartImage from '../shared/SmartImage'
 
 /**
  * Your mission:
  * 1. Record the CLS
  * 2. Specify the image height by using the aspect ratio
  * 3. Confirm that the CLS is reduced
- * 
+ *
  * * Solution available in the `solution/challenge-4` brancｈ
  *
  * ミッション:
@@ -15,6 +16,26 @@ import { Link } from 'react-router-dom'
  * 3. CLSが減少していることを確認する
  *
  * 解答は `solution/challenge-4` ブランチを参照
+ * 
+ * 以下、チケットの例
+ * 
+ * 問題
+ * レイアウトシフトが起こっている
+ * CLS: 0.11, 0.13, 0.07
+ * 
+ * 施策
+ * 画像の高さをアスペクト比を使用して指定する
+ * 
+ * 環境
+ * Fast 4G
+ * 
+ * 記録
+ * Before: 0.11, 0.13, 0.07
+ * After: 0, 0, 0
+ * 
+ * 結果
+ * CLSをゼロにできた
+ * CLS: 0, 0, 0
  */
 
 function ChallengeFour() {
@@ -38,10 +59,10 @@ function ChallengeFour() {
       <ul className="image-list">
         {imageIds.map((id) => (
           <li key={id}>
-            <img
+            <SmartImage
               src={`https://picsum.photos/600/400.webp?random=${id}`}
-              className="full-width-image"
               alt={`Random image ${id}`}
+              lazy={true}
             />
           </li>
         ))}
