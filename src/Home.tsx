@@ -4,11 +4,15 @@ import { useState, Suspense, lazy } from 'react'
 
 const SuspenseDemo = lazy(
   () =>
-    new Promise((resolve) => {
+    new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(import('./shared/SuspenseDemo'))
+        import('./shared/SuspenseDemo')
+          .then((module) => {
+            resolve({ default: module.default })
+          })
+          .catch(reject)
       }, 1500)
-    }),
+    }) as Promise<{ default: React.ComponentType<{}> }>,
 )
 
 function Home() {
