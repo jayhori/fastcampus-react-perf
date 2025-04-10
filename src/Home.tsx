@@ -33,7 +33,7 @@ function Home() {
           <Link to="/challenge-4">4: Minimizing layout shifts</Link>
         </li>
         <li>
-          <Link to="/challenge-5">5</Link>
+          <Link to="/challenge-5">5: Code-splitting</Link>
         </li>
       </ul>
       <p>
@@ -66,9 +66,7 @@ function Home() {
         </li>
       </ul>
 
-      <button
-        onClick={() => setShowDemo((prev) => !prev)}
-      >
+      <button onClick={() => setShowDemo((prev) => !prev)}>
         {showDemo ? 'Hide Demo Component' : 'Show Demo Component'}
       </button>
 
