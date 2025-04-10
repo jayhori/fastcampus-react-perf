@@ -1,7 +1,19 @@
 import './App.css'
 import { Link } from 'react-router-dom'
+import { useState, Suspense, lazy } from 'react'
+
+const SuspenseDemo = lazy(
+  () =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(import('./shared/SuspenseDemo'))
+      }, 1500)
+    }),
+)
 
 function Home() {
+  const [showDemo, setShowDemo] = useState(false)
+
   return (
     <>
       <h1>Web Performance with React</h1>
@@ -53,6 +65,20 @@ function Home() {
           <Link to="/example-scoreboard">Time to Scoreboard</Link>
         </li>
       </ul>
+
+      <button
+        onClick={() => setShowDemo((prev) => !prev)}
+      >
+        {showDemo ? 'Hide Demo Component' : 'Show Demo Component'}
+      </button>
+
+      {showDemo && (
+        <>
+          <Suspense fallback={<div>Loading component...</div>}>
+            <SuspenseDemo />
+          </Suspense>
+        </>
+      )}
 
       <h2>About</h2>
       <p>
