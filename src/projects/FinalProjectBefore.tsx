@@ -53,14 +53,22 @@ function FinalProjectBefore() {
       </nav>
 
       <div className="feed">
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <div className="post" key={post.id}>
             <PostHeader username={post.username} />
-            <img
+
+            {index === 0 ? (<img
               src={`https://picsum.photos/800/800.webp?random=${post.id}`}
               alt={`Post by ${post.username}`}
               className="post-image"
-            />
+              fetchPriority='high'
+            />) : (<img
+              src={`https://picsum.photos/800/800.webp?random=${post.id}`}
+              alt={`Post by ${post.username}`}
+              className="post-image"
+              loading="lazy"
+            />)}
+            
             <div className="post-actions">
               <button
                 className="like-button"
