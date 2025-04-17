@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/FinalProject.css'
 
+// Dev環境
+// JPG: 2.2MB
+// WebP: 894kB
+
 interface Post {
   id: number
   username: string
@@ -53,7 +57,7 @@ function FinalProjectBefore() {
           <div className="post" key={post.id}>
             <PostHeader username={post.username} />
             <img
-              src={`https://picsum.photos/800/800.jpg?random=${post.id}`}
+              src={`https://picsum.photos/800/800.webp?random=${post.id}`}
               alt={`Post by ${post.username}`}
               className="post-image"
             />
