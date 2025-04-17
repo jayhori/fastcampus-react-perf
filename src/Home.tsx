@@ -45,11 +45,6 @@ function Home() {
         inefficient. Your task is to identify and fix performance issues.
       </p>
 
-      <h2>Final Project</h2>
-      <p>
-        <Link to="/final-project">Build a fully optimized web page</Link>
-      </p>
-
       <h2>Solutions</h2>
       <p>
         Solutions are available in the solution git branches. For example, the
@@ -81,6 +76,12 @@ function Home() {
           </Suspense>
         </>
       )}
+
+      <h2>Final Project</h2>
+      <p>
+        <Link to="/final-project-before">Start</Link>{' '}
+        | <Link to="/final-project-after">Solution</Link>
+      </p>
 
       <h2>About</h2>
       <p>

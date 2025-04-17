@@ -9,6 +9,8 @@ const ChallengeFive = lazy(() => import('./challenges/ChallengeFive'))
 import ExampleFetchPriority from './examples/ExampleFetchPriority'
 import ExampleLazyLoadingVersusLCP from './examples/ExampleLazyLoadingVersusLCP'
 import Scoreboard from './examples/Scoreboard'
+import FinalProjectBefore from './projects/FinalProjectBefore'
+import FinalProjectAfter from './projects/FinalProjectAfter'
 
 function App() {
   return (
@@ -21,9 +23,20 @@ function App() {
           <Route path="/challenge-3" element={<ChallengeThree />} />
           <Route path="/challenge-4" element={<ChallengeFour />} />
           <Route path="/challenge-5" element={<ChallengeFive />} />
-          <Route path="/example-fetch-priority" element={<ExampleFetchPriority />} />
-          <Route path="/example-lazy-loading-vs-lcp" element={<ExampleLazyLoadingVersusLCP />} />
+          <Route
+            path="/example-fetch-priority"
+            element={<ExampleFetchPriority />}
+          />
+          <Route
+            path="/example-lazy-loading-vs-lcp"
+            element={<ExampleLazyLoadingVersusLCP />}
+          />
           <Route path="/example-scoreboard" element={<Scoreboard />} />
+          <Route
+            path="/final-project-before"
+            element={<FinalProjectBefore />}
+          />
+          <Route path="/final-project-after" element={<FinalProjectAfter />} />
         </Routes>
       </Router>
     </>
