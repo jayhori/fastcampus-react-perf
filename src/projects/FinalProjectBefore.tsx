@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/FinalProject.css'
 
@@ -30,6 +30,13 @@ interface Post {
   caption: string
 }
 
+const PostHeader = memo(({ username }: { username: string }) => (
+  <div className="post-header">
+    <div className="avatar"></div>
+    <span className="username">{username}</span>
+  </div>
+))
+
 function FinalProjectBefore() {
   const generatePosts = (): Post[] => {
     return Array.from({ length: 20 }, (_, i) => ({
@@ -44,19 +51,12 @@ function FinalProjectBefore() {
   const [posts, setPosts] = useState<Post[]>(generatePosts())
 
   const handleLike = (postId: number) => {
-    setPosts(
-      posts.map((post) =>
+    setPosts((prevPosts) =>
+      prevPosts.map((post) =>
         post.id === postId ? { ...post, likes: post.likes + 1 } : post,
       ),
     )
   }
-
-  const PostHeader = ({ username }: { username: string }) => (
-    <div className="post-header">
-      <div className="avatar"></div>
-      <span className="username">{username}</span>
-    </div>
-  )
 
   return (
     <div className="final-project">
