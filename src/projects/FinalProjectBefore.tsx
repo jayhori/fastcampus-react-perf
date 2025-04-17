@@ -6,6 +6,23 @@ import '../styles/FinalProject.css'
 // JPG: 2.2MB
 // WebP: 894kB
 
+// Before preloading
+// Fast 4G
+// LCP: 4.24s, 4.14s, 5.22s
+//
+// Slow 4G
+// LCP: 13.22s (Did not record what LCP was), 11.39s (LCP was the title), 14.45s (LCP was the first image)
+//
+// After preloading
+// Fast 4G
+// LCP: 2.39s, 2.31s, 4.37s (The preloaded image eventually became LCP, but the LCP value did not ditermin until much later than it loaded.)
+//
+// Production env
+// Fast 4G
+// LCP: 0.54s, 2.96s, 2.40s
+// Slow 4G
+// LCP: 1.86s, 1.86s, 1.86s (This might be a human error redundancy), 2.14s
+
 interface Post {
   id: number
   username: string
@@ -58,7 +75,7 @@ function FinalProjectBefore() {
             <PostHeader username={post.username} />
 
             {index === 0 ? (<img
-              src={`https://picsum.photos/800/800.webp?random=${post.id}`}
+              src={`https://picsum.photos/800/800.webp?fixed=1`}
               alt={`Post by ${post.username}`}
               className="post-image"
               fetchPriority='high'
