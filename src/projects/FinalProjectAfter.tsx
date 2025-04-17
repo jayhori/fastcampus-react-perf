@@ -69,8 +69,6 @@ function FinalProjectAfter() {
                 alt={`Post by ${post.username}`}
                 className="post-image"
                 fetchPriority="high"
-                width="800"
-                height="800"
               />
             ) : (
               <img
@@ -79,8 +77,6 @@ function FinalProjectAfter() {
                 className="post-image"
                 // Apply lazy loading based on feature flag
                 loading={ENABLE_LAZY_LOADING ? 'lazy' : undefined}
-                width="800"
-                height="800"
               />
             )}
 
