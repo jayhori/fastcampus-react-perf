@@ -17,7 +17,6 @@ const featureFlags = {
   ENABLE_LAZY_LOADING: true,
 }
 
-// Use the defined object as the default context value
 export const FeatureFlagContext = createContext(featureFlags)
 
 function App() {
