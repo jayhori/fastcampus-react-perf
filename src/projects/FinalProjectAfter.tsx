@@ -1,6 +1,7 @@
-import { useState, memo } from 'react'
+import { useState, memo, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/FinalProject.css'
+import { FeatureFlagContext } from '../App'
 
 interface Post {
   id: number
@@ -8,9 +9,6 @@ interface Post {
   likes: number
   caption: string
 }
-
-// Feature flag - would typically come from configuration or API
-const ENABLE_LAZY_LOADING = true
 
 // Optimized with React.memo
 const PostHeader = memo(({ username }: { username: string }) => (
@@ -24,6 +22,8 @@ const PostHeader = memo(({ username }: { username: string }) => (
 PostHeader.displayName = 'PostHeader'
 
 function FinalProjectAfter() {
+  const { ENABLE_LAZY_LOADING } = useContext(FeatureFlagContext)
+
   const generatePosts = (): Post[] => {
     return Array.from({ length: 20 }, (_, i) => ({
       id: i + 1,
@@ -50,12 +50,6 @@ function FinalProjectAfter() {
         <Link to="/">Back to Home</Link>
         <h1>Instagram-like Feed (Optimized)</h1>
         <p>This is the optimized version with improved performance!</p>
-        <p>
-          <small>
-            Feature flags: Lazy loading is{' '}
-            {ENABLE_LAZY_LOADING ? 'enabled' : 'disabled'}
-          </small>
-        </p>
       </nav>
 
       <div className="feed">
