@@ -1,6 +1,7 @@
-import { useState, memo } from 'react'
+import { useState, memo, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/FinalProject.css'
+import { FeatureFlagContext } from '../App'
 
 /**
  * PERFORMANCE BENCHMARKS
@@ -28,6 +29,20 @@ import '../styles/FinalProject.css'
  * | Slow 4G   | 1.86s, 1.86s, 1.86s, 2.14s       | Potential measurement redundancy          |
  */
 
+/**
+ * フィールドで施策の効果を計りたい
+ * 
+ * フィーチャーフラグ (Feature Flags)
+ * 
+ * A/Bテスト
+ * 2つのグループに分ける
+ * 1つは既存 (Control), 1つは施策 (Treatment)
+ * 今回のtreatmentはloading="lazy"の追加 (独立変数)
+ * 今回の従属変数はLCP
+ * サーバーに送ったデータを集計
+ * 統計的に優位かを調べる
+ */
+
 interface Post {
   id: number
   username: string
@@ -43,6 +58,8 @@ const PostHeader = memo(({ username }: { username: string }) => (
 ))
 
 function FinalProjectBefore() {
+  const { ENABLE_LAZY_LOADING } = useContext(FeatureFlagContext)
+
   const generatePosts = (): Post[] => {
     return Array.from({ length: 20 }, (_, i) => ({
       id: i + 1,
@@ -88,7 +105,7 @@ function FinalProjectBefore() {
               src={`https://picsum.photos/800/800.webp?random=${post.id}`}
               alt={`Post by ${post.username}`}
               className="post-image"
-              loading="lazy"
+              loading={ENABLE_LAZY_LOADING ? "lazy" : undefined}
             />)}
             
             <div className="post-actions">
