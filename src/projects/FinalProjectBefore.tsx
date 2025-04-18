@@ -2,26 +2,31 @@ import { useState, memo } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/FinalProject.css'
 
-// Dev環境
-// JPG: 2.2MB
-// WebP: 894kB
-
-// Before preloading
-// Fast 4G
-// LCP: 4.24s, 4.14s, 5.22s
-//
-// Slow 4G
-// LCP: 13.22s (Did not record what LCP was), 11.39s (LCP was the title), 14.45s (LCP was the first image)
-//
-// After preloading
-// Fast 4G
-// LCP: 2.39s, 2.31s, 4.37s (The preloaded image eventually became LCP, but the LCP value did not ditermin until much later than it loaded.)
-//
-// Production env
-// Fast 4G
-// LCP: 0.54s, 2.96s, 2.40s
-// Slow 4G
-// LCP: 1.86s, 1.86s, 1.86s (This might be a human error redundancy), 2.14s
+/**
+ * PERFORMANCE BENCHMARKS
+ * =====================
+ * 
+ * Image Sizes:
+ * - JPG: 2.2MB
+ * - WebP: 894kB (59% smaller)
+ * 
+ * Development Environment:
+ * ------------------------
+ * | Condition      | Network   | LCP Values                   | Notes                                          |
+ * |----------------|-----------|------------------------------|------------------------------------------------|
+ * | Before         | Fast 4G   | 4.24s, 4.14s, 5.22s          |                                                |
+ * | preloading     | Slow 4G   | 13.22s, 11.39s, 14.45s       | Varying LCP elements (title, first image)      |
+ * |----------------|-----------|------------------------------|------------------------------------------------|
+ * | After          | Fast 4G   | 2.39s, 2.31s, 4.37s          | Preloaded image became LCP but value           |
+ * | preloading     |           |                              | determined later than actual load              |
+ * 
+ * Production Environment (After preloading):
+ * -----------------------
+ * | Network   | LCP Values                       | Notes                                     |
+ * |-----------|----------------------------------|-------------------------------------------|
+ * | Fast 4G   | 0.54s, 2.96s, 2.40s              |                                           |
+ * | Slow 4G   | 1.86s, 1.86s, 1.86s, 2.14s       | Potential measurement redundancy          |
+ */
 
 interface Post {
   id: number
