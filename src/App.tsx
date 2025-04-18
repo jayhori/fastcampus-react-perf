@@ -1,11 +1,11 @@
-import { lazy, createContext } from 'react'
+import { createContext } from 'react'
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Home from './Home'
 import ChallengeOne from './challenges/ChallengeOne'
 import ChallengeTwo from './challenges/ChallengeTwo'
 import ChallengeThree from './challenges/ChallengeThree'
 import ChallengeFour from './challenges/ChallengeFour'
-const ChallengeFive = lazy(() => import('./challenges/ChallengeFive'))
+import ChallengeFive from './challenges/ChallengeFive'
 import ExampleFetchPriority from './examples/ExampleFetchPriority'
 import ExampleLazyLoadingVersusLCP from './examples/ExampleLazyLoadingVersusLCP'
 import Scoreboard from './examples/Scoreboard'
