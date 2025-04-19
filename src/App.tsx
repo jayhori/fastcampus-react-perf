@@ -12,9 +12,14 @@ import Scoreboard from './examples/Scoreboard'
 import FinalProjectBefore from './projects/FinalProjectBefore'
 import FinalProjectAfter from './projects/FinalProjectAfter'
 
-// This would typically be fetched from a server or a config file
+// Simulate a user ID (would normally come from authentication)
+const currentUserId = 85831
+const totalUsers = 100000
+const canaryPercentage = 95
+
+// Feature flags with dynamic value based on user ID
 const featureFlags = {
-  ENABLE_LAZY_LOADING: true,
+  ENABLE_LAZY_LOADING: currentUserId <= totalUsers * (canaryPercentage / 100),
 }
 
 export const FeatureFlagContext = createContext(featureFlags)
